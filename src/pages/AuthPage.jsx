@@ -2,7 +2,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const AuthPage = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -16,10 +17,18 @@ const AuthPage = () => {
       <form onSubmit={handleLogin} className="bg-white p-8 rounded-xl shadow w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
         <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+          className="w-full p-3 mb-4 border rounded"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           required
           className="w-full p-3 mb-4 border rounded"
         />
