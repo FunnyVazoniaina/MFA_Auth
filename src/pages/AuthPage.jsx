@@ -59,8 +59,11 @@ const AuthPage = () => {
         
         <div className="mb-4">
           <ReCAPTCHA
-            sitekey="VOTRE_SITE_KEY" // ⛳ Remplacez ici avec votre clé publique Google
-            onChange={(token) => setRecaptchaToken(token)}
+            sitekey="6Lcxz38rAAAAAAmQEITGh-JdXhsiBiZWJAzrorRL" 
+            onChange={(token) => {
+              console.log("Token CAPTCHA :", token);
+              setRecaptchaToken(token);
+  }}
           />
         </div>
 

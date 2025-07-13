@@ -1,21 +1,4 @@
 // Mock user database - Replace with real API calls in production
-let mockUsers = [
-  { 
-    id: 1, 
-    username: 'admin', 
-    email: 'admin@example.com', 
-    password: 'password123',
-    createdAt: new Date().toISOString()
-  },
-  { 
-    id: 2, 
-    username: 'user', 
-    email: 'user@example.com', 
-    password: 'user123',
-    createdAt: new Date().toISOString()
-  }
-];
-
 // Auth Service Object
 export const authService = {
   /**
